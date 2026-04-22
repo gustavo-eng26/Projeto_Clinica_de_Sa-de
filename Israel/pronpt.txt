@@ -11,3 +11,18 @@ siga as instrucoes:
 5 - Crie somente a pagina inicial, com as informacoes do item 3
 6 - Apenas crie o botao para as seguintes paginas 'Sobre a clinica', 'Profissionais', 'Servicoes/Especialistas', 'Contato/Agendamento'. Nao crie nenhum html para essas paginas, apenas crie o botao para que futuramento possa ser 
 7 - Informacoes sobre as paginas a serem desenvolvidas no item 6 devem ser muito breves na pagina inicial, serao desenvolvidas futuramente em seus arquivos html futuramente
+
+
+siga as intrucoes:
+
+1 - Use como base os arquivos da pasta site_clinica
+2 - Crie a pagina .html sobre os Servicos/Especialistas
+3 - Lista de servicos ou Especialistas
+4 - Descrição breve de cada serviço
+5 - Ilustre com imagens
+
+
+siga as intrucoes:
+
+1 - Use como base os arquivos da pasta site_clinica
+2 - Adicione a imagem 'site_clinica\png\foto-ampliar-espaco-terapeutico.png' na pagina inicial
