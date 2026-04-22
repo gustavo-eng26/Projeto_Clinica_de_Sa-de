@@ -76,8 +76,11 @@ body {
     font-weight: 500;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     opacity: 0.8;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.3rem;
 }
 
 /* Hero Section */
@@ -592,6 +595,188 @@ body {
     opacity: 0.95;
 }
 
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Mission, Vision, Values Section */
+.mission-vision {
+    padding: 80px 20px;
+    background: var(--white);
+}
+
+.mission-vision h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.mvv-card {
+    background: var(--light-bg);
+    padding: 2.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--accent-color);
+}
+
+.mvv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.mvv-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.mvv-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mvv-card p {
+    color: var(--light-text);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Differentials Section */
+.differentials {
+    padding: 80px 20px;
+    background: var(--light-bg);
+}
+
+.differentials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.differentials-intro {
+    text-align: center;
+    color: var(--light-text);
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.differentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.differential-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.differential-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.differential-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.differential-card h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.differential-card p {
+    color: var(--light-text);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Why Choose Section */
+.why-choose {
+    padding: 80px 20px;
+    background: var(--white);
+}
+
+.why-choose h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.why-choose-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.why-choose-item {
+    display: flex;
+    gap: 1.5rem;
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.why-choose-item:hover {
+    transform: translateX(8px);
+}
+
+.why-choose-item .checkmark {
+    font-size: 2rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.why-choose-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.why-choose-item p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background: #7A5A94;
+}
+
 /* Footer */
 footer {
     background: var(--dark-text);
@@ -654,11 +839,26 @@ footer p {
         grid-template-columns: 1fr;
     }
 
+    .mvv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .differentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-choose-content {
+        grid-template-columns: 1fr;
+    }
+
     .services h2,
     .about h2,
     .benefits h2,
     .contact h2,
-    .gallery-section h2 {
+    .gallery-section h2,
+    .mission-vision h2,
+    .differentials h2,
+    .why-choose h2 {
         font-size: 2rem;
     }
 
@@ -675,15 +875,8 @@ footer p {
         font-size: 0.9rem;
     }
 
-    .contact-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
-    .contact-buttons {
+    .contact-buttons,
+    .cta-buttons {
         flex-direction: column;
     }
 
@@ -735,36 +928,29 @@ footer p {
     .gallery-img {
         height: 200px;
     }
-}
 
-@media (max-width: 480px) {
-    .navbar .container {
-        flex-direction: column;
-        gap: 1rem;
+    .mvv-card,
+    .differential-card,
+    .why-choose-item {
+        padding: 1.5rem;
     }
 
-    .nav-links {
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
+    .mvv-icon,
+    .differential-icon {
+        font-size: 2rem;
     }
 
-    .hero {
-        padding: 40px 20px;
-        min-height: 300px;
-    }
-
-    .hero-content h1 {
+    .page-header h1 {
         font-size: 1.5rem;
     }
 
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+    .mission-vision h2,
+    .differentials h2,
+    .why-choose h2 {
+        font-size: 1.5rem;
     }
 
-    .services-grid,
-    .benefits-grid {
-        grid-template-columns: 1fr;
+    .differentials-intro {
+        font-size: 0.9rem;
     }
 }
