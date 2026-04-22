@@ -268,22 +268,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 12. Performance optimization: Lazy load images if using actual img tags
 function lazyLoadProfessionalImages() {
-    if ('IntersectionObserver' in window) {
-        const images = document.querySelectorAll('.professional-image img');
-        
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.add('loaded');
-                    observer.unobserve(img);
-                }
-            });
-        });
+    const images = document.querySelectorAll('.professional-image img');
 
-        images.forEach(img => imageObserver.observe(img));
+    if (!('IntersectionObserver' in window)) {
+        images.forEach(img => img.classList.add('loaded'));
+        return;
     }
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                }
+
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
 }
 
 document.addEventListener('DOMContentLoaded', lazyLoadProfessionalImages);
