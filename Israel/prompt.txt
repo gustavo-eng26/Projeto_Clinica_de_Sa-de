@@ -24,5 +24,6 @@ siga as intrucoes:
 
 siga as intrucoes:
 
-1 - Use como base os arquivos da pasta site_clinica
-2 - Adicione a imagem 'site_clinica\png\ambiente_clinica_terapeutica_[01 a 04]' na pagina inicial
+1 - Use como base os arquivos enviados
+2 - Adicione a imagens na pagina inicial
+3 - corrija qualquer erro que tenha na imagem
