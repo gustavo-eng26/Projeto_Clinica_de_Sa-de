@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Clínica de Saúde</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">🏥</span>
+                <span class="logo-text">MediCare</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#inicio" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#medicos" class="nav-link">Médicos</a></li>
+                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="#agendamento" class="nav-link btn-agendar">Agendar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Sua Saúde é Nossa Prioridade</h1>
+            <p class="hero-subtitle">Atendimento médico de excelência com tecnologia de ponta e profissionais altamente qualificados</p>
+            <button class="btn btn-primary" id="btnAgendar">Agendar Consulta</button>
+        </div>
+        <div class="hero-image">
+            <div class="hero-placeholder">👨‍⚕️</div>
+        </div>
+    </header>
+
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="section-subtitle">Oferecemos uma ampla gama de serviços de saúde</p>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">🔬</div>
+                    <h3>Consultas Gerais</h3>
+                    <p>Atendimento clínico completo com diagnóstico e tratamento personalizados</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">💊</div>
+                    <h3>Farmácia</h3>
+                    <p>Medicamentos com orientação farmacêutica profissional</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🧪</div>
+                    <h3>Exames Laboratoriais</h3>
+                    <p>Laboratório moderno com resultados rápidos e precisos</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">📋</div>
+                    <h3>Ultrassonografia</h3>
+                    <p>Equipamentos de última geração para diagnósticos por imagem</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🏃</div>
+                    <h3>Fisioterapia</h3>
+                    <p>Tratamentos de reabilitação e prevenção de lesões</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🦷</div>
+                    <h3>Odontologia</h3>
+                    <p>Cuidados dentários completos com profissionais especializados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Médicos -->
+    <section id="medicos" class="medicos">
+        <div class="container">
+            <h2 class="section-title">Nossa Equipe Médica</h2>
+            <p class="section-subtitle">Profissionais dedicados ao seu bem-estar</p>
+            <div class="medicos-grid">
+                <div class="medico-card">
+                    <div class="medico-image">👨‍⚕️</div>
+                    <h3>Dr. Carlos Silva</h3>
+                    <p class="especialidade">Clínico Geral</p>
+                    <p class="descricao">20 anos de experiência em medicina clínica geral</p>
+                    <div class="medico-social">
+                        <a href="#" class="social-link">📧</a>
+                        <a href="#" class="social-link">📱</a>
+                    </div>
+                </div>
+                <div class="medico-card">
+                    <div class="medico-image">👩‍⚕️</div>
+                    <h3>Dra. Maria Santos</h3>
+                    <p class="especialidade">Cardiologista</p>
+                    <p class="descricao">15 anos especializando em cardiologia preventiva</p>
+                    <div class="medico-social">
+                        <a href="#" class="social-link">📧</a>
+                        <a href="#" class="social-link">📱</a>
+                    </div>
+                </div>
+                <div class="medico-card">
+                    <div class="medico-image">👨‍⚕️</div>
+                    <h3>Dr. João Oliveira</h3>
+                    <p class="especialidade">Pediatra</p>
+                    <p class="descricao">12 anos cuidando da saúde infantil com dedicação</p>
+                    <div class="medico-social">
+                        <a href="#" class="social-link">📧</a>
+                        <a href="#" class="social-link">📱</a>
+                    </div>
+                </div>
+                <div class="medico-card">
+                    <div class="medico-image">👩‍⚕️</div>
+                    <h3>Dra. Paula Costa</h3>
+                    <p class="especialidade">Dermatologista</p>
+                    <p class="descricao">10 anos em dermatologia estética e clínica</p>
+                    <div class="medico-social">
+                        <a href="#" class="social-link">📧</a>
+                        <a href="#" class="social-link">📱</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2 class="section-title">Sobre a MediCare</h2>
+                    <p>A MediCare é uma clínica de saúde comprometida com a excelência no atendimento médico há mais de 20 anos. Nossa missão é proporcionar cuidado humanizado com tecnologia de ponta.</p>
+                    <p>Contamos com uma equipe multidisciplinar de profissionais altamente qualificados, dedicados a oferecer diagnósticos precisos e tratamentos eficazes.</p>
+                    <ul class="sobre-lista">
+                        <li>✓ Atendimento 24 horas</li>
+                        <li>✓ Equipamentos modernos</li>
+                        <li>✓ Profissionais certificados</li>
+                        <li>✓ Ambiente acolhedor</li>
+                    </ul>
+                </div>
+                <div class="sobre-image">
+                    <div class="image-placeholder">🏥</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horários -->
+    <section class="horarios">
+        <div class="container">
+            <h2 class="section-title">Horário de Funcionamento</h2>
+            <div class="horarios-grid">
+                <div class="horario-card">
+                    <h3>Segunda a Sexta</h3>
+                    <p>08:00 - 18:00</p>
+                </div>
+                <div class="horario-card">
+                    <h3>Sábados</h3>
+                    <p>09:00 - 13:00</p>
+                </div>
+                <div class="horario-card">
+                    <h3>Domingos</h3>
+                    <p>Fechado</p>
+                </div>
+                <div class="horario-card">
+                    <h3>Emergência 24h</h3>
+                    <p>Atendimento disponível</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agendamento Modal -->
+    <div id="agendamento" class="modal" id="agendamentoModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <h2>Agendar Consulta</h2>
+            <form id="formAgendamento" class="agendamento-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="especialidade">Especialidade</label>
+                        <select id="especialidade" name="especialidade" required>
+                            <option value="">Selecione uma especialidade</option>
+                            <option value="clinico">Clínico Geral</option>
+                            <option value="cardiologia">Cardiologia</option>
+                            <option value="pediatria">Pediatria</option>
+                            <option value="dermatologia">Dermatologia</option>
+                            <option value="fisioterapia">Fisioterapia</option>
+                            <option value="odontologia">Odontologia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="medico">Preferência de Médico</label>
+                        <select id="medico" name="medico">
+                            <option value="">Sem preferência</option>
+                            <option value="carlos">Dr. Carlos Silva</option>
+                            <option value="maria">Dra. Maria Santos</option>
+                            <option value="joao">Dr. João Oliveira</option>
+                            <option value="paula">Dra. Paula Costa</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="data">Data Desejada</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Horário</label>
+                        <select id="hora" name="hora" required>
+                            <option value="">Selecione um horário</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem (Opcional)</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva seus sintomas ou dúvidas..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirmar Agendamento</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-grid">
+                <div class="contato-card">
+                    <div class="contato-icon">📍</div>
+                    <h3>Endereço</h3>
+                    <p>Rua da Saúde, 1000<br>Centro - São Paulo, SP</p>
+                </div>
+                <div class="contato-card">
+                    <div class="contato-icon">📞</div>
+                    <h3>Telefone</h3>
+                    <p>(11) 3000-0000<br>(11) 99999-9999</p>
+                </div>
+                <div class="contato-card">
+                    <div class="contato-icon">✉️</div>
+                    <h3>E-mail</h3>
+                    <p>contato@medicare.com.br<br>agendamento@medicare.com.br</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre MediCare</h4>
+                    <p>Sua clínica de confiança para cuidados de saúde de qualidade.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#medicos">Médicos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare - Todos os direitos reservados. | Desenvolvido com ❤️ para sua saúde</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
