@@ -37,7 +37,7 @@ body {
 .navbar {
     background: var(--primary-color);
     color: var(--white);
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -52,15 +52,32 @@ body {
 
 .logo {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 .logo-icon {
-    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 4px;
+    overflow: hidden;
+}
+
+.logo-icon-img {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-links {
@@ -542,6 +559,15 @@ body {
     opacity: 0.9;
 }
 
+.logo-service {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
 .service-details h3 {
     color: var(--primary-color);
     font-size: 1.8rem;
@@ -804,6 +830,11 @@ footer p {
 
     .emoji-large {
         font-size: 5rem;
+    }
+
+    .logo-service {
+        width: 100px;
+        height: 100px;
     }
 
     .benefits {
