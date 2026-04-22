@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato e Agendamento - Harmonia Terapias</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contato.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">Harmonia Terapias</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="profissionais.html">Profissionais</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contato e Agendamento</h1>
+            <p>Estamos aqui para ajudar você na sua jornada de transformação e bem-estar</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Formulário de Contato -->
+                <div class="contact-form-box">
+                    <h2>Envie uma Mensagem</h2>
+                    <p class="form-intro">Preencha o formulário abaixo e entraremos em contato em breve</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="servico">Serviço de Interesse</label>
+                            <select id="servico" name="servico" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="yoga">Yoga Terapêutico</option>
+                                <option value="massagem">Massagem Terapêutica</option>
+                                <option value="terapia">Terapia Cognitiva</option>
+                                <option value="reiki">Reiki</option>
+                                <option value="aromaterapia">Aromaterapia</option>
+                                <option value="musicoterapia">Musicoterapia</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Conte-nos sobre seus objetivos terapêuticos..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Enviar Mensagem</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+
+                <!-- Informações de Contato -->
+                <div class="contact-info-box">
+                    <!-- WhatsApp -->
+                    <div class="info-item-large">
+                        <div class="info-icon-large">💬</div>
+                        <div class="info-content">
+                            <h3>WhatsApp</h3>
+                            <p>Agende sua consulta diretamente via WhatsApp</p>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma sessão na Harmonia Terapias." target="_blank" class="btn btn-secondary">
+                                Abrir WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="info-item-large">
+                        <div class="info-icon-large">📞</div>
+                        <div class="info-content">
+                            <h3>Telefone</h3>
+                            <p>(11) 9999-9999</p>
+                            <p style="font-size: 0.9rem; color: var(--light-text); margin-top: 0.5rem;">Segunda a sábado, 9h às 19h</p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="info-item-large">
+                        <div class="info-icon-large">✉️</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p><a href="mailto:contato@harmoniaterap.com.br" class="email-link">contato@harmoniaterap.com.br</a></p>
+                            <p style="font-size: 0.9rem; color: var(--light-text); margin-top: 0.5rem;">Resposta em até 24h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização Section -->
+    <section class="location-section">
+        <div class="container">
+            <h2>Nossa Localização</h2>
+            <div class="location-content">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0849881625763!2d-46.66561!3d-23.561414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c61c69c1c1%3A0x1000!2sHarmonia%20Terapias!5e0!3m2!1spt-BR!2sbr!4v1234567890" width="100%" height="400" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <div class="address-info">
+                    <h3>Endereço</h3>
+                    <p>Rua das Terapias, 123</p>
+                    <p>Vila Harmonia - São Paulo, SP</p>
+                    <p>CEP: 01234-567</p>
+                    
+                    <h3 style="margin-top: 2rem;">Como Chegar</h3>
+                    <p>🚗 <strong>De carro:</strong> Estacionamento próprio disponível</p>
+                    <p>🚌 <strong>De ônibus:</strong> Linhas 100, 200, 300</p>
+                    <p>🚇 <strong>Metrô:</strong> Estação Vila Harmonia a 5 minutos de caminhada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horário Section -->
+    <section class="hours-section">
+        <div class="container">
+            <h2>Horário de Funcionamento</h2>
+            <div class="hours-grid">
+                <div class="hours-card">
+                    <h3>Segunda a Quinta</h3>
+                    <p class="hours-time">09:00 - 19:00</p>
+                </div>
+                <div class="hours-card">
+                    <h3>Sexta</h3>
+                    <p class="hours-time">09:00 - 20:00</p>
+                </div>
+                <div class="hours-card">
+                    <h3>Sábado</h3>
+                    <p class="hours-time">09:00 - 17:00</p>
+                </div>
+                <div class="hours-card closed">
+                    <h3>Domingo</h3>
+                    <p class="hours-time">Fechado</p>
+                </div>
+            </div>
+            <p class="hours-note">⚠️ Atendimento por agendamento prévio. Em caso de urgência, favor ligar.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>❓ Como agendar uma consulta?</h3>
+                    <p>Você pode agendar através do WhatsApp, telefone ou preenchendo o formulário em nossa página. Responderemos o mais breve possível para confirmar seu agendamento.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>💳 Quais formas de pagamento vocês aceitam?</h3>
+                    <p>Aceitamos cartão de crédito, débito, PIX e dinheiro. Consulte-nos sobre parcelamento e descontos para múltiplas sessões.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🎫 Qual é o valor das sessões?</h3>
+                    <p>O valor varia conforme o tipo de terapia. Entre em contato para conhecer nossa tabela de preços e pacotes especiais.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>📅 Qual é o tempo de espera para uma consulta?</h3>
+                    <p>Normalmente conseguimos agendar dentro de 3 a 7 dias. Para urgências, favor entrar em contato por telefone.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>👔 Preciso de documentação para primeira consulta?</h3>
+                    <p>Sim, leve seu CPF, cartão de plano de saúde (se houver) e informações sobre medicamentos que utiliza.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🚫 Qual é a política de cancelamento?</h3>
+                    <p>Cancelamentos com até 24h de antecedência não têm multa. Cancelamentos com menos de 24h podem sofrer cobrança de 50% do valor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Transformar Sua Vida?</h2>
+            <p>Entre em contato conosco hoje mesmo e dê o primeiro passo rumo ao bem-estar integral</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma sessão na Harmonia Terapias." target="_blank" class="btn btn-primary btn-large">💬 Agendar no WhatsApp</a>
+                <a href="tel:+5511999999999" class="btn btn-secondary btn-large">📞 Ligar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Harmonia Terapias. Todos os direitos reservados.</p>
+            <p>Cuidando de você com amor e dedicação 💚</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/contato.js"></script>
+</body>
+</html>
