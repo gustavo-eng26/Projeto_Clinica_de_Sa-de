@@ -1,13 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clínica de Saúde - Bem-vindo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>TITULO</h1>
-    <h2>TITULO 2</h2>
-    <p> esse é um teste do projeto da clinica de saude</p>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">🏥 Clínica Saúde Plus</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="profissionais.html">Profissionais</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Sua Saúde é Nossa Prioridade</h1>
+                <p>Atendimento de qualidade com profissionais experientes</p>
+                <a href="#servicos" class="btn btn-primary">Conhecer Serviços</a>
+            </div>
+        </section>
+
+        <!-- Serviços Section -->
+        <section id="servicos" class="servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="servicos-grid">
+                    <div class="servico-card">
+                        <div class="icon">🩺</div>
+                        <h3>Clínica Geral</h3>
+                        <p>Atendimento completo para seu bem-estar geral</p>
+                    </div>
+                    <div class="servico-card">
+                        <div class="icon">👁️</div>
+                        <h3>Oftalmologia</h3>
+                        <p>Cuidado especializado da sua visão</p>
+                    </div>
+                    <div class="servico-card">
+                        <div class="icon">🦷</div>
+                        <h3>Odontologia</h3>
+                        <p>Saúde bucal completa e moderna</p>
+                    </div>
+                    <div class="servico-card">
+                        <div class="icon">💪</div>
+                        <h3>Fisioterapia</h3>
+                        <p>Recuperação e reabilitação eficiente</p>
+                    </div>
+                    <div class="servico-card">
+                        <div class="icon">🧘</div>
+                        <h3>Psicologia</h3>
+                        <p>Suporte emocional e bem-estar mental</p>
+                    </div>
+                    <div class="servico-card">
+                        <div class="icon">🧬</div>
+                        <h3>Exames</h3>
+                        <p>Diagnóstico preciso com tecnologia de ponta</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <div class="contato-grid">
+                    <div class="contato-info">
+                        <div class="info-item">
+                            <span class="label">📍 Endereço:</span>
+                            <p>Rua da Saúde, 123 - São Paulo, SP</p>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">📞 Telefone:</span>
+                            <p>(11) 3000-0000 | (11) 99999-9999</p>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">📧 Email:</span>
+                            <p>contato@clinicasaudeplus.com.br</p>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">🕐 Horário:</span>
+                            <p>Seg-Sex: 08h às 18h<br>Sábado: 08h às 12h</p>
+                        </div>
+                    </div>
+                    <form class="contato-form" onsubmit="handleFormSubmit(event)">
+                        <input type="text" placeholder="Seu Nome" required>
+                        <input type="email" placeholder="Seu Email" required>
+                        <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Clínica de Saúde Plus. Todos os direitos reservados.</p>
+            <p>Desenvolvido com ❤️ para sua saúde</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
