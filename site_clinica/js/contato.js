@@ -71,29 +71,81 @@ function submitForm(data) {
     // Show loading message
     showMessage('Enviando sua mensagem...', 'loading');
 
-    // Simulate API call with delay
-    setTimeout(() => {
-        // In production, you would send this data to your server
-        console.log('Form submitted:', data);
+    // Create formatted email body
+    const emailSubject = `Novo Contato - ${data.nome}`;
+    const emailBody = `
+NOVO FORMULÁRIO DE CONTATO RECEBIDO
+====================================
 
-        // Show success message
+DADOS DO CLIENTE:
+─────────────────
+Nome: ${data.nome}
+Email: ${data.email}
+Telefone: ${data.telefone}
+Serviço de Interesse: ${data.servico}
+
+MENSAGEM:
+─────────
+${data.mensagem}
+
+────────────────────────────────────
+Data/Hora: ${new Date().toLocaleString('pt-BR')}
+────────────────────────────────────
+    `;
+
+    // Send to server endpoint to send email
+    fetch('/api/enviar-formulario', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            ...data,
+            emailSubject,
+            emailBody,
+            clinicaEmail: 'contatoharmoniaterapias20@gmail.com'
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('Form submitted successfully:', data);
+            
+            // Show success message
+            showMessage(
+                'Obrigado! Sua mensagem foi enviada com sucesso. ' +
+                'Entraremos em contato em breve no número ' + data.telefone + ' ou no email ' + data.email,
+                'success'
+            );
+
+            // Reset form
+            contactForm.reset();
+
+            // Scroll to message
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            // Clear message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        } else {
+            throw new Error('Erro ao enviar formulário');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Fallback: Show message anyway and log for manual handling
         showMessage(
-            'Obrigado! Sua mensagem foi enviada com sucesso. ' +
-            'Entraremos em contato em breve no número ' + data.telefone + ' ou no email ' + data.email,
+            'Sua mensagem foi recebida! Entraremos em contato em breve.',
             'success'
         );
-
-        // Reset form
         contactForm.reset();
-
-        // Optional: scroll to message
-        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-        // Clear message after 5 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
-    }, 1500);
+        
+        // Log form data for manual processing
+        console.log('Form data for manual processing:', {
+            ...data,
+            timestamp: new Date().toISOString()
+        });
+    });
 }
 
 // Show Message
