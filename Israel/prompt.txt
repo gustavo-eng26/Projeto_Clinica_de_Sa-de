@@ -36,3 +36,16 @@ siga as intrucoes:
 2 - Atualize o arquivo index, mantenha as informacoes basica sobre cada sessao do site, e a estrutura base, para que nao fique distinto do que foi padronizado
 3 - distribua melhor as imagens (elas estao centralizadas), uma imagem por sessao, ex: 'sobre a clinica' colocar uma imagem relacionada ao ambiente 
 4 - pode tirar o topico conheça nosso ambiente, pois a as imagens ja estarao disponiveis
+
+
+siga as intrucoes:
+
+1 - Use como base os arquivos da pasta site_clinica
+2 - repare na imagem, quando a tela esta na vertical, (smartphone) o cabeçario está muito grande, poderia deixa-lo mais sutil quando fosse vizualiazado em smartphones? 
+
+
+
+siga as intrucoes:
+
+1 - Use como base os arquivos da pasta site_clinica
+2 - Altere em todos (TODOS) html e css a cor principal do site para a paleta #A8C686 e #F2EFE7
