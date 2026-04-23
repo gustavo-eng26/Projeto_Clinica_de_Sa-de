@@ -82,26 +82,28 @@ function submitForm(data) {
         'outro': 'Outro'
     };
 
-    // Preparar dados para envio via FormSubmit.co
-    const formData = new FormData();
-    formData.append('Nome', data.nome);
-    formData.append('Email', data.email);
-    formData.append('Telefone', data.telefone);
-    formData.append('Serviço de Interesse', servicoMap[data.servico] || data.servico);
-    formData.append('Mensagem', data.mensagem);
-    formData.append('Data/Hora', new Date().toLocaleString('pt-BR'));
-    formData.append('_subject', `Novo Contato - ${data.nome}`);
-    formData.append('_captcha', 'false');
-    formData.append('_autoresponse', `Olá ${data.nome},\n\nObrigado por entrar em contato com a Harmonia Terapias!\nRecebemos sua mensagem e em breve entraremos em contato com você no número ${data.telefone} ou via email.\n\nAtenciosamente,\nHarmonia Terapias`);
+    // Preparar dados para envio via servidor local
+    const dadosEnvio = {
+        nome: data.nome,
+        email: data.email,
+        telefone: data.telefone,
+        servico: data.servico,
+        mensagem: data.mensagem,
+        clinicaEmail: 'contatoharmoniaterapias20@gmail.com'
+    };
 
-    // Enviar para FormSubmit.co
-    fetch('https://formsubmit.co/contatoharmoniaterapias20@gmail.com', {
+    // Enviar para o servidor local
+    fetch('/api/enviar-formulario', {
         method: 'POST',
-        body: formData
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dadosEnvio)
     })
-    .then(response => {
-        if (response.ok) {
-            console.log('Form submitted successfully:', data);
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            console.log('Formulário enviado com sucesso:', data);
             
             // Show success message
             showMessage(
@@ -121,18 +123,16 @@ function submitForm(data) {
                 formMessage.style.display = 'none';
             }, 5000);
         } else {
-            throw new Error('Erro ao enviar formulário');
+            throw new Error(result.message || 'Erro ao enviar formulário');
         }
     })
     .catch(error => {
-        console.error('Error:', error);
-        // Show success message anyway
+        console.error('Erro:', error);
+        // Show error message
         showMessage(
-            'Obrigado! Sua mensagem foi enviada com sucesso. ' +
-            'Entraremos em contato em breve no número ' + data.telefone + ' ou no email ' + data.email,
-            'success'
+            'Desculpe! Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente ou entre em contato pelo WhatsApp.',
+            'error'
         );
-        contactForm.reset();
         formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         
         // Clear message after 5 seconds
