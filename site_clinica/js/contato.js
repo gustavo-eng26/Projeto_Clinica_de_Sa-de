@@ -68,78 +68,23 @@ function submitForm(data) {
     const formMessage = document.getElementById('formMessage');
     const contactForm = document.getElementById('contactForm');
 
-    // Show loading message
-    showMessage('Enviando sua mensagem...', 'loading');
+    // Show success message
+    showMessage(
+        'Obrigado! Seu formulário foi preenchido com sucesso. ' +
+        'Retornaremos em breve.',
+        'success'
+    );
 
-    // Traduzir serviço
-    const servicoMap = {
-        'yoga': 'Yoga Terapêutico',
-        'massagem': 'Massagem Terapêutica',
-        'terapia': 'Terapia Cognitiva',
-        'reiki': 'Reiki',
-        'aromaterapia': 'Aromaterapia',
-        'musicoterapia': 'Musicoterapia',
-        'outro': 'Outro'
-    };
+    // Reset form
+    contactForm.reset();
 
-    // Preparar dados para envio via servidor local
-    const dadosEnvio = {
-        nome: data.nome,
-        email: data.email,
-        telefone: data.telefone,
-        servico: data.servico,
-        mensagem: data.mensagem,
-        clinicaEmail: 'contatoharmoniaterapias20@gmail.com'
-    };
+    // Scroll to message
+    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-    // Enviar para o servidor local
-    fetch('/api/enviar-formulario', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dadosEnvio)
-    })
-    .then(response => response.json())
-    .then(result => {
-        if (result.success) {
-            console.log('Formulário enviado com sucesso:', data);
-            
-            // Show success message
-            showMessage(
-                'Obrigado! Sua mensagem foi enviada com sucesso. ' +
-                'Entraremos em contato em breve no número ' + data.telefone + ' ou no email ' + data.email,
-                'success'
-            );
-
-            // Reset form
-            contactForm.reset();
-
-            // Scroll to message
-            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-            // Clear message after 5 seconds
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
-        } else {
-            throw new Error(result.message || 'Erro ao enviar formulário');
-        }
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-        // Show error message
-        showMessage(
-            'Desculpe! Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente ou entre em contato pelo WhatsApp.',
-            'error'
-        );
-        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        
-        // Clear message after 5 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
-    });
+    // Clear message after 5 seconds
+    setTimeout(() => {
+        formMessage.style.display = 'none';
+    }, 5000);
 }
 
 // Show Message
