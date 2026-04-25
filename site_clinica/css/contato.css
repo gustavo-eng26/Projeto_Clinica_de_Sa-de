@@ -375,3 +375,143 @@
         font-size: 1.8rem;
     }
 }
+
+/* Ajustes específicos para telas muito pequenas (ex.: smartphones estreitos) */
+@media (max-width: 430px) {
+    .contact-section,
+    .location-section,
+    .hours-section,
+    .faq-section {
+        padding: 40px 12px;
+    }
+
+    .contact-wrapper {
+        gap: 1.5rem;
+    }
+
+    .contact-form-box {
+        padding: 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-form-box h2 {
+        font-size: 1.4rem;
+    }
+
+    .form-intro {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.65rem;
+        font-size: 0.9rem;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Garantir que os cards de contato não estourem */
+    .contact-info-box {
+        gap: 1.5rem;
+    }
+
+    .info-item-large {
+        padding: 1.2rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+        word-break: break-word;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .info-icon-large {
+        font-size: 2rem;
+        justify-content: center;
+    }
+
+    .info-content h3 {
+        font-size: 1rem;
+    }
+
+    .info-content p {
+        font-size: 0.85rem;
+    }
+
+    /* Botões que não podem ultrapassar */
+    .btn {
+        white-space: normal;
+        word-break: break-word;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 16px;
+        font-size: 0.9rem;
+        box-sizing: border-box;
+    }
+
+    .btn-icon {
+        height: 28px;
+        width: 28px;
+        margin-right: 4px;
+        vertical-align: middle;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .location-section h2,
+    .hours-section h2,
+    .faq-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .hours-grid {
+        gap: 1rem;
+    }
+
+    .hours-card {
+        padding: 1.2rem;
+    }
+
+    .hours-time {
+        font-size: 1.2rem;
+    }
+
+    .faq-item {
+        padding: 1.2rem;
+    }
+
+    .faq-item h3 {
+        font-size: 1rem;
+    }
+
+    .address-info {
+        padding: 1.2rem;
+    }
+
+    /* Ajuste para o iframe do mapa não vazar */
+    .map-container iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Prevenir scroll lateral */
+    body {
+        overflow-x: hidden;
+    }
+}
