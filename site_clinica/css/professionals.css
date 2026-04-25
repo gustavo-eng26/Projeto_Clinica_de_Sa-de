@@ -70,6 +70,20 @@
     overflow: hidden;
 }
 
+/* Estilo para o número do CRP */
+.crp {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    margin-bottom: 1.2rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--light-bg);
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
 .professional-image img {
     width: 100%;
     height: 100%;

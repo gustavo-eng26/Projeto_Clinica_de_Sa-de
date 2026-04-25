@@ -30,7 +30,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 16px;
 }
 
 /* Navigation */
@@ -192,6 +192,14 @@ body {
 .btn-large {
     padding: 15px 40px;
     font-size: 1.1rem;
+}
+
+.btn-icon {
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .btn-primary {

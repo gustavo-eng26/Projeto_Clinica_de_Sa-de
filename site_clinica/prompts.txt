@@ -12,7 +12,6 @@ siga as instrucoes:
 6 - Apenas crie o botao para as seguintes paginas 'Sobre a clinica', 'Profissionais', 'Servicoes/Especialistas', 'Contato/Agendamento'. Nao crie nenhum html para essas paginas, apenas crie o botao para que futuramento possa ser 
 7 - Informacoes sobre as paginas a serem desenvolvidas no item 6 devem ser muito breves na pagina inicial, serao desenvolvidas futuramente em seus arquivos html futuramente
 
-
 siga as intrucoes:
 
 1 - Use como base os arquivos da pasta site_clinica
@@ -43,7 +42,6 @@ siga as intrucoes:
 
 1 - Use como base os arquivos da pasta site_clinica
 2 - Altere em todos (TODOS) html e css a cor principal do site para a paleta #A8C686 e #F2EFE7
-
 
 quero alterar uma area do meu site, para isso siga as intruções:
 
