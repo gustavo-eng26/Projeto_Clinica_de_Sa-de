@@ -19,7 +19,7 @@
 }
 
 .section-description {
-    text-align: center;
+    text-align: justify;
     font-size: 1.05rem;
     color: var(--light-text);
     margin-bottom: 3rem;
@@ -150,6 +150,7 @@
     line-height: 1.7;
     margin-bottom: 1.5rem;
     flex-grow: 1;
+    text-align: justify;
 }
 
 /* Certifications/Badges */

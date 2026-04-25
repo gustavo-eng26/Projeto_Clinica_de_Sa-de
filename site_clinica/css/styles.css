@@ -348,6 +348,7 @@ body {
     font-size: 0.95rem;
     line-height: 1.6;
     flex-grow: 1;
+    text-align: justify;
 }
 
 .services-preview-cta {
@@ -382,6 +383,7 @@ body {
     font-size: 1.05rem;
     color: var(--light-text);
     line-height: 1.8;
+    text-align: justify;
 }
 
 .about-stats {
@@ -468,7 +470,7 @@ body {
 
 /* Benefits Section */
 .benefits {
-    padding: 80px 20px;
+    padding: 40px 20px;
     background: var(--light-bg);
 }
 
@@ -616,7 +618,6 @@ body {
     align-items: center;
     margin-bottom: 60px;
     padding: 40px;
-    background: var(--light-bg);
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
